@@ -20,10 +20,9 @@ function toggleNightMode() {
 
   //Start here, maybe add dark mode to end 
   //setting default
-  let x = ''
-  let y = ''
-  let currentOperation = null
-  let currentOperationScreen = false
+  let operator = '';
+  let previousValue = '';
+  let currentValue = '';
 
 
 
@@ -45,15 +44,6 @@ function toggleNightMode() {
     return x - y;
   }
 
-// query selectors
-  const numberButtons = document.querySelectorAll('[data-number]')
-  const operatorButtons = document.querySelectorAll('[data-operatior]')
-  const equalsButton = document.querySelectorId('equalsBtn')
-  const clearButton = document.querySelectorId('clearBtn')
-  const deleteButton =  document.querySelectorId('deleteBtn')
-  const pointButton = document.querySelectorId('pointBtn')
-  const lastOperationScreen = document.querySelectorId('lastOperationScreen')
-  const currurentOperationScreen = document.querySelectorId('currentOperationScreen')
 
 // event listeners
 
@@ -64,8 +54,23 @@ deleteButton.addEventListener('click', deleteNumber)
 pointButton.addEventListener('click', appendPoint)
 
 
-// append to screen?
+document.addEventListener("DOMContentLoaded", function){
+  let clear = document.querySelector("#Clear-btn")
+  let equal = document.querySelector(".equals")
+  let decimal = document.querySelector(".decimal")
 
-numberButtons.forEach((button) =>
-  button.addEventListener('click', () => appendNumber(button.textContent))
-)
+  let numbers = document.querySelectorAll(".number")
+  let operators = document.querySelectorAll(".operator")
+
+  let previousScreen = document.querySelector(".previous")
+  let currentScreen = document.querySelector(".current")
+  
+  numbers.forEach((number) => number.addEventListener("click", function(e){
+    handleNumber(e.target.textContent)
+    currentScreen.textContent = currentValue;
+  }))
+}
+
+function handleNumber (num){
+  currentValue += num;
+}
