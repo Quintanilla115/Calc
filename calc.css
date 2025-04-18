@@ -28,6 +28,7 @@
     width: 300px;
     margin-bottom: 15px;
     justify-content: space-evenly;
+  
  
 }
 .number, .operator{
@@ -35,6 +36,7 @@
     width: 100%;
     height: 35px;
     justify-content: center;
+    margin: 5px;
 }
 
 .enter, .clear{
