@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="calc.js"></script>
+    <script src="calc.js" defer></script>
     <link rel="stylesheet" href="calc.css">
 </head>
 <body>
@@ -12,33 +12,33 @@
     <h1> Calculator</h1>
         <div class="calc">
             <div class="display"> 
-                <div class = "previous"></div>
-                <div class = "current"></div>
+                <div class = "previous" id="OpperandTwo"></div>
+                <div class = "current" id="CurrentDisplay"></div>
             </div>
             <div class="buttons">
                 <div class="row">
-                    <button class="number" id="num">9</button>
-                    <button class="number" id="num">8</button>
-                    <button class="number" id="num">7</button>
-                    <button class="operator" id="Operator">/</button>
+                    <button class="number" id="num" value="9">9</button>
+                    <button class="number" id="num" value="8">8</button>
+                    <button class="number" id="num" value="7">7</button>
+                    <button class="operator" id="Operator" value="/">/</button>
                  </div>
                  <div class="row">
-                    <button class="number" id="num">6</button>
-                    <button class="number" id="num">5</button>
-                    <button class="number" id="num">4</button>
-                    <button class="operator" id="Operator">*</button>
+                    <button class="number" id="num" value="6">6</button>
+                    <button class="number" id="num" value="5">5</button>
+                    <button class="number" id="num" value="4">4</button>
+                    <button class="operator" id="Operator" value="*">*</button>
                 </div>
                 <div class="row">
-                    <button class="number" id="num">3</button>
-                    <button class="number" id="num">2</button>
-                    <button class="number" id="num">1</button>
-                    <button class="operator" id="Operator">-</button>
+                    <button class="number" id="num" value="3">3</button>
+                    <button class="number" id="num" value="2">2</button>
+                    <button class="number" id="num" value="1">1</button>
+                    <button class="operator" id="Operator" value="-">-</button>
                 </div>
                 <div class="row">
-                    <button class="number" id="Decimal">.</button>
-                    <button class="number" id="num">0</button>
+                    <button class="number" id="Decimal" value=".">.</button>
+                    <button class="number" id="num" value="0">0</button>
                     <button class="operator" id="Negative">+/-</button>
-                    <button class="enter" id="Enter">Enter</button>
+                    <button class="enter" id="Enter" value="Enter">Enter</button>
                 </div>
                 <div class="row">
                     <button class="clear" id="Clear">Clear</button>
@@ -46,7 +46,7 @@
             </div>
         </div>
         
-            <button onclick="toggleNightMode()">Toggle Night Mode</button>
+
             
 
 

@@ -18,6 +18,13 @@
     border: black;
     border-width: 2px;
     border-style: solid;
+    opacity: .5;
+}
+
+.previous{
+    height: 30px;
+    width: 100%;
+    background: #45ded6;
 }
 
 .number, .operator{
