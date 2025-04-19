@@ -1,12 +1,13 @@
 
-let CurrentDisplay = " "
+let CurrentDisplay = ''
 let PreviousDisplay = ''
-let CurrentOperatorScreen = ''
 let shouldResetScreen = false
-let score = 0
+let Opperator = null
 
 const numberButtons = document.querySelectorAll('[data-number]')
 const buttons = document.querySelectorAll("button");
+const CurrentOperatorScreen = document.getElementById('CurrentDisplay')
+const ClearButton = document.getElementById('Clear')
 
 
 
@@ -22,8 +23,27 @@ function appendNumber(number) {
 
   console.log(typeof CurrentDisplay);
   console.log(CurrentDisplay)
+  CurrentOperatorScreen.textContent +=number
 }
 
-function updateScreen(){
-  
-}
+function updateScreen(){}
+
+
+function appendNumber1(number){
+  if (number === 1||2||3||4||5||6||7||8||9||0){
+    appendNumber
+  }
+  if (number === '*' || '/' || '-'|| '+' ){
+    if (number === '*'){
+      Opperator = multiply
+    }
+    if (number === '/'){
+      Opperator = divide
+    }
+    if (number === '-'){
+      Opperator = subtract
+  }
+  if (number === '+'){
+    Opperator = addition
+  }
+}}
